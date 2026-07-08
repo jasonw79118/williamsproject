@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Williamsproject</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Williamsproject</h1>
+      <p id="subtitle">A living research site for the Williams, Lee, Blakely, Bangs, Miller/Mueller, Taylor, Duck, and Drake family story.</p>
+    </div>
+    <div class="header-actions">
+      <span class="badge" id="versionBadge">v0.1.0</span>
+      <button id="exportBtn" class="secondary">Export JSON</button>
+      <label class="file-btn secondary">Import JSON<input id="importFile" type="file" accept="application/json" hidden></label>
+      <button id="resetBtn" class="danger">Reset local edits</button>
+    </div>
+  </header>
+
+  <section class="notice">
+    <strong>Research disclaimer:</strong> Items marked as candidate, hypothesis, or imported GEDCOM are not proven. Dan Williams / GW Williams Register information is treated as most likely unless the register itself flags uncertainty or later evidence disproves it. Living people are masked for public GitHub Pages use.
+  </section>
+
+  <nav class="tabs" aria-label="Main sections">
+    <button data-tab="story" class="active">Likely Story</button>
+    <button data-tab="tree">Tree</button>
+    <button data-tab="people">People</button>
+    <button data-tab="dna">DNA Clusters</button>
+    <button data-tab="research">Research Targets</button>
+    <button data-tab="sources">Sources</button>
+    <button data-tab="edit">Edit / Add</button>
+  </nav>
+
+  <main>
+    <section id="story" class="tab-panel active">
+      <div class="grid two">
+        <div class="card">
+          <h2>Family line story builder</h2>
+          <label>Choose a line</label>
+          <select id="lineSelect"></select>
+          <div id="lineStory" class="story-box"></div>
+        </div>
+        <div class="card">
+          <h2>Oldest direct ancestors by line</h2>
+          <div id="oldestLines" class="stack"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Project summary</h2>
+        <div id="projectSummary"></div>
+      </div>
+    </section>
+
+    <section id="tree" class="tab-panel">
+      <div class="grid side">
+        <aside class="card">
+          <h2>Find a person</h2>
+          <input id="treeSearch" type="search" placeholder="Search name, surname, place..." />
+          <div id="treeResults" class="result-list"></div>
+        </aside>
+        <div class="card">
+          <div id="personDetail"></div>
+          <h3>Ancestor path</h3>
+          <div id="ancestorPath" class="path"></div>
+          <h3>Parents, spouses, children</h3>
+          <div id="familyPanel"></div>
+          <h3>Pedigree view</h3>
+          <div id="pedigree" class="pedigree"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="people" class="tab-panel">
+      <div class="card">
+        <h2>People table</h2>
+        <div class="toolbar">
+          <input id="peopleSearch" type="search" placeholder="Filter table..." />
+          <select id="confidenceFilter"><option value="">All confidence levels</option></select>
+          <select id="lineFilter"><option value="">All lines</option></select>
+        </div>
+        <div class="table-wrap"><table id="peopleTable"></table></div>
+      </div>
+    </section>
+
+    <section id="dna" class="tab-panel">
+      <div class="card">
+        <h2>DNA clusters</h2>
+        <div id="dnaList" class="stack"></div>
+      </div>
+    </section>
+
+    <section id="research" class="tab-panel">
+      <div class="card">
+        <h2>Research targets</h2>
+        <div id="researchList" class="stack"></div>
+      </div>
+    </section>
+
+    <section id="sources" class="tab-panel">
+      <div class="card">
+        <h2>Sources</h2>
+        <input id="sourceSearch" type="search" placeholder="Search sources..." />
+        <div id="sourceList" class="stack"></div>
+      </div>
+    </section>
+
+    <section id="edit" class="tab-panel">
+      <div class="grid two">
+        <div class="card">
+          <h2>Edit selected person</h2>
+          <p class="muted">Edits save to this browser. Use <strong>Export JSON</strong> and replace <code>assets/data/project-data.json</code> in GitHub to publish changes.</p>
+          <form id="editForm"></form>
+        </div>
+        <div class="card">
+          <h2>Add person / claim</h2>
+          <form id="addPersonForm">
+            <label>Name<input name="name" required placeholder="Full name"></label>
+            <label>Surname<input name="surn" placeholder="Surname"></label>
+            <label>Sex<select name="sex"><option value="">Unknown</option><option value="M">Male</option><option value="F">Female</option></select></label>
+            <label>Line tag<select name="lineTag" id="addLineTag"><option value="">No line tag</option></select></label>
+            <label>Relationship to selected person<select name="relationship"><option value="none">No relationship yet</option><option value="parent">Parent of selected person</option><option value="child">Child of selected person</option><option value="spouse">Spouse of selected person</option></select></label>
+            <label>Birth date<input name="birthDate" placeholder="24 Nov 1843"></label>
+            <label>Birth place<input name="birthPlace" placeholder="County, State"></label>
+            <label>Death date<input name="deathDate"></label>
+            <label>Confidence<select name="confidence" id="addConfidence"></select></label>
+            <label>Research note<textarea name="note" rows="5" placeholder="Why this person might belong; evidence needed"></textarea></label>
+            <button type="submit">Add person</button>
+          </form>
+          <hr>
+          <h3>Add research target</h3>
+          <form id="addTargetForm">
+            <label>Title<input name="title" required></label>
+            <label>Priority<select name="priority"><option>High</option><option>Medium</option><option>Low</option></select></label>
+            <label>Status<input name="status" value="Open"></label>
+            <label>Summary<textarea name="summary" rows="4"></textarea></label>
+            <button type="submit">Add target</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Williamsproject</span><span id="footerVersion"></span><span>Public-safe genealogy research site</span>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

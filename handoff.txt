@@ -1,0 +1,39 @@
+williamsproject handoff — v0.1.0
+Generated: 2026-07-08T18:47:05.364713Z
+
+Purpose:
+A GitHub Pages-ready static site for Jason Williams's genealogy research project.
+
+Repository target:
+williamsproject
+
+Data imported:
+- Jason Williams Family Tree.ged
+- 816 people
+- 214 families
+- 97 GEDCOM source records
+
+Privacy:
+Living people are masked in the packaged public dataset. Birth/death details and notes are removed from living profiles.
+
+Current project policy:
+- Dan Williams / Modified Register for George Washington Williams is treated as most likely / confirmed unless contradicted or unless Dan's own notes flag uncertainty.
+- Older Ancestry GEDCOM imported generations are treated as candidate or hypothesis until source-reviewed.
+- George W. Williams's older paternal line remains a brick-wall hypothesis; do not treat Samuel/Lewis/John Thomas Williams as proven until Y-DNA and records support it.
+
+Important built-in research targets:
+1. George W. Williams parentage / Sarah Williams-Lee identity.
+2. Y-DNA37 Williams placement once results return.
+3. MCR 1743 / Addie Lee testimony.
+4. Jacob Walker Lee and Zachariah Lee relationship.
+5. John William Blakely parentage.
+6. Little John Smith / Elizabeth Hanna / Newsom conflict.
+7. Nancy Williams Little / Basden watch-list lead.
+
+Important built-in DNA cluster:
+Cluster A — Chr 3: 4,340,847–19,436,587
+Jason WP2969985 + Shirley Jane Greene Lee T780066 + Devon Rothchild M850975 triangulated.
+Common ancestor unknown.
+
+How to publish edits:
+Use Export JSON in the site, then replace assets/data/project-data.json in GitHub and push.
