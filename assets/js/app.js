@@ -1,5 +1,5 @@
 let DATA=null;
-let state={selectedPersonId:null, peopleById:{}, familiesById:{}, localKey:'williamsproject-data-v0.2.1', themeKey:'williamsproject-theme-v0.2.1'};
+let state={selectedPersonId:null, peopleById:{}, familiesById:{}, localKey:'williamsproject-data-v0.2.4', themeKey:'williamsproject-theme-v0.2.4'};
 
 const $=sel=>document.querySelector(sel);
 const $$=sel=>Array.from(document.querySelectorAll(sel));
@@ -180,7 +180,13 @@ function renderPeopleTable(){
  $('#peopleTable').innerHTML=`<thead><tr><th>Name</th><th>Birth</th><th>Death</th><th>Line</th><th>Confidence</th><th>Status</th></tr></thead><tbody>`+arr.map(p=>{const b=safeBirth(p); return `<tr><td><button onclick="selectPerson('${p.id}')">${esc(displayName(p))}</button></td><td>${esc(b?.date||'')}${isLivingPrivate(p)?'<span class="muted">Living details hidden</span>':''}<br><span class="muted">${esc(b?.place||'')}</span></td><td>${esc(p.death?.date||'')}<br><span class="muted">${esc(p.death?.place||'')}</span></td><td>${esc((p.lineTags||[]).join(', '))}</td><td>${confidenceChip(p.confidence)}</td><td>${esc(p.researchStatus||'')}</td></tr>`}).join('')+`</tbody>`;
 }
 function renderDNA(){
- $('#dnaList').innerHTML=DATA.dnaClusters.map(c=>`<div class="mini-card"><h3>${esc(c.title)}</h3><p>${esc(c.summary)}</p><div class="chips"><span class="chip">Chr ${esc(c.chromosome)}</span><span class="chip">${esc(c.start)}–${esc(c.end)}</span><span class="chip warn">${esc(c.status)}</span></div></div>`).join('');
+ $('#dnaList').innerHTML=DATA.dnaClusters.map(c=>{
+  const members=(c.members||[]).length?`<h4>Members</h4><ul>${c.members.map(m=>`<li><strong>${esc(m.name)}</strong>${m.kit?` — ${esc(m.kit)}`:''}${m.role?` <span class="muted">${esc(m.role)}</span>`:''}</li>`).join('')}</ul>`:'';
+  const comparisons=(c.comparisons||[]).length?`<h4>Segment comparisons</h4><div class="table-wrap"><table><thead><tr><th>Pair</th><th>Chr</th><th>Start</th><th>End</th><th>cM</th><th>SNPs</th><th>Notes</th></tr></thead><tbody>${c.comparisons.map(x=>`<tr><td>${esc(x.pair)}</td><td>${esc(x.chromosome)}</td><td>${esc(x.start??'')}</td><td>${esc(x.end??'')}</td><td>${esc(x.centimorgans||x.totalHIR||'')}</td><td>${esc(x.snps||'')}</td><td>${esc(x.notes||'')}</td></tr>`).join('')}</tbody></table></div>`:'';
+  const next=(c.nextSteps||[]).length?`<h4>Next steps</h4><ul>${c.nextSteps.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
+  const span=(c.start&&c.end)?`${esc(c.start)}–${esc(c.end)}`:'unbounded / close-family comparison';
+  return `<div class="mini-card dna-card"><h3>${esc(c.title)}</h3><p>${esc(c.summary)}</p><div class="chips"><span class="chip">Chr ${esc(c.chromosome)}</span><span class="chip">${span}</span><span class="chip warn">${esc(c.status)}</span>${c.confidence?`<span class="chip">${esc(c.confidence)}</span>`:''}</div>${members}${comparisons}${c.interpretation?`<h4>Interpretation</h4><p>${esc(c.interpretation)}</p>`:''}${next}</div>`;
+ }).join('');
 }
 function sourceLinksForTarget(t){
  const links=(t.sourceLinks||[]).map(l=>`<a class="source-link" target="_blank" rel="noopener" href="${esc(l.url)}">${esc(l.label||l.url)}</a>`).join('');

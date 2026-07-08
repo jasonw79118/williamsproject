@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Williams Project",
-    "version": "0.2.3",
-    "generatedAt": "2026-07-08T22:15:00Z",
+    "version": "0.2.4",
+    "generatedAt": "2026-07-08T22:30:00Z",
     "rootPersonId": "@I36459481881@",
     "privacyMode": "UI masks living-person vital details unless public permission is marked. Because this is a static GitHub Pages site, anything committed inside project-data.json can still be viewed directly; review living-person facts before publishing.",
     "importSummary": {
@@ -65471,13 +65471,98 @@
   },
   "dnaClusters": [
     {
-      "id": "DNA_CLUSTER_A",
-      "title": "Cluster A — Chr 3 Jason/Laurie/Shirley triangulated segment",
-      "status": "Confirmed triangulated segment; Devon is close relative evidence, not independent proof by itself",
+      "id": "DNA_CLUSTER_A_CHR3_LEE_BLAKELY_WILLIAMS",
+      "title": "Cluster A — Chr 3 Jason/Laurie/Shirley triangulated Lee-Blakely-Williams segment",
+      "status": "Confirmed triangulated segment; not assigned to a single surname yet",
       "chromosome": "3",
       "start": 4340847,
       "end": 19436587,
-      "summary": "Jason WP2969985, Laurie Poole Brunell T906798, and Shirley Jane Greene Lee T780066 triangulate on chromosome 3. Devon Rothchild M850975 is a parent/child-level match to Laurie and should be treated as close-family support rather than an independent fourth triangulation member unless direct Jason/Devon and Shirley/Devon segment comparisons support the same interval."
+      "build": "GRCh37 / Build 37",
+      "confidence": "Strong autosomal cluster lead; not proof of Williams paternal parentage by itself",
+      "summary": "Jason Williams WP2969985, Laurie Poole Brunell T906798, and Shirley Jane Greene Lee T780066 form a confirmed chromosome 3 triangulated group. The confirmed shared overlap currently tracked for the project is Chr 3: 4,340,847–19,436,587. Interpret this first as a Lee / Blakely / Williams migration-cluster segment until trees, records, and Y-DNA clarify the ancestral source.",
+      "members": [
+        {
+          "name": "Jason Williams",
+          "kit": "WP2969985",
+          "platform": "Ancestry / GEDmatch",
+          "role": "Project owner / Williams line descendant"
+        },
+        {
+          "name": "Laurie Poole Brunell",
+          "kit": "T906798",
+          "platform": "GEDmatch Migration - F2 - T",
+          "role": "Core triangulated match"
+        },
+        {
+          "name": "Shirley Jane Greene Lee",
+          "kit": "T780066",
+          "platform": "GEDmatch Migration - F2 - F",
+          "role": "Core triangulated match with Lee-name clue"
+        },
+        {
+          "name": "Devon Rothchild",
+          "kit": "M850975",
+          "platform": "GEDmatch Migration - V4 - M",
+          "role": "Close-family support for Laurie; not independent triangulation evidence from Laurie comparison alone"
+        }
+      ],
+      "comparisons": [
+        {
+          "pair": "Jason Williams WP2969985 ↔ Laurie Poole Brunell T906798",
+          "chromosome": "3",
+          "start": 4261274,
+          "end": 37688152,
+          "centimorgans": "48.3",
+          "snps": "6,239",
+          "largestSegment": "48.3 cM",
+          "totalHIR": "48.3 cM",
+          "estimatedGenerationsToMRCA": "4.1",
+          "notes": "Large one-segment match. Contains the full Cluster A triangulated overlap."
+        },
+        {
+          "pair": "Laurie Poole Brunell T906798 ↔ Shirley Jane Greene Lee T780066",
+          "chromosome": "3",
+          "start": 4340847,
+          "end": 19788213,
+          "centimorgans": "26.0",
+          "snps": "4,489",
+          "largestSegment": "26.0 cM",
+          "totalHIR": "26.0 cM",
+          "estimatedGenerationsToMRCA": "4.6",
+          "notes": "Nested inside the Jason-Laurie segment and overlaps the Jason-Shirley tracked segment."
+        },
+        {
+          "pair": "Jason Williams WP2969985 ↔ Shirley Jane Greene Lee T780066",
+          "chromosome": "3",
+          "start": 4340847,
+          "end": 19436587,
+          "centimorgans": "not recorded in this site build",
+          "snps": "not recorded in this site build",
+          "largestSegment": "not recorded in this site build",
+          "totalHIR": "not recorded in this site build",
+          "estimatedGenerationsToMRCA": "not recorded in this site build",
+          "notes": "Direct Jason-Shirley comparison was previously supplied/recorded in the project notes and confirms the shared triangulated overlap used for Cluster A."
+        },
+        {
+          "pair": "Devon Rothchild M850975 ↔ Laurie Poole Brunell T906798",
+          "chromosome": "whole-genome close-family comparison",
+          "start": null,
+          "end": null,
+          "centimorgans": "3,584.2 total HIR",
+          "snps": "297,164 used",
+          "largestSegment": "281.5 cM",
+          "totalHIR": "3,584.2 cM",
+          "estimatedGenerationsToMRCA": "1",
+          "notes": "Parent/child-level or equivalent close-family match: 24 shared segments, only 20 mismatches. Devon is not counted as an independent fourth triangulated match unless direct Devon-Jason and Devon-Shirley segment comparisons show the same Chr 3 interval."
+        }
+      ],
+      "interpretation": "This is the strongest autosomal DNA lead currently tracked, but it should not be used to promote any older Williams paternal candidate above George Washington Williams. It may point to Lee, Blakely/Blakeley/Blakeney, Smith/Hanna, Bunn/Burns, Williams, or another shared Southern migration-family segment.",
+      "nextSteps": [
+        "Identify Laurie Poole Brunell/Burnell tree and surnames.",
+        "Run/record Devon ↔ Jason and Devon ↔ Shirley one-to-one comparisons on Chr 3.",
+        "Use the coming Williams Y-DNA results before promoting any older Williams paternal line.",
+        "Map Cluster A against Lee/Blakely/Williams FAN-club records from the Carolinas, Mississippi, Louisiana, and Texas."
+      ]
     },
     {
       "id": "DNA_CLUSTER_B",
@@ -65486,7 +65571,37 @@
       "chromosome": "2",
       "start": 121901979,
       "end": 151409434,
-      "summary": "Private yourDNAportal profile LAU82054f8c shares 26.67 cM with Jason on Chr 2. Needs shared-match review; not part of Cluster A."
+      "summary": "Private yourDNAportal profile LAU82054f8c shares 26.67 cM with Jason on Chr 2. Needs shared-match review; not part of Cluster A.",
+      "build": "GRCh37 / Build 37",
+      "confidence": "Single segment lead; not assigned to a line",
+      "members": [
+        {
+          "name": "Jason Williams",
+          "kit": "WP2969985",
+          "role": "Project owner"
+        },
+        {
+          "name": "Private yourDNAportal profile",
+          "kit": "LAU82054f8c",
+          "role": "Private match"
+        }
+      ],
+      "comparisons": [
+        {
+          "pair": "Jason Williams ↔ private yourDNAportal profile LAU82054f8c",
+          "chromosome": "2",
+          "start": 121901979,
+          "end": 151409434,
+          "centimorgans": "26.67",
+          "snps": "not recorded",
+          "notes": "Single segment; requires shared-match review before assignment."
+        }
+      ],
+      "interpretation": "Do not connect this segment to a named family line until shared matches and trees support it.",
+      "nextSteps": [
+        "Review shared matches around Chr 2: 121.9M–151.4M.",
+        "Look for recurring surnames and locations before assigning to a line."
+      ]
     }
   ],
   "researchTargets": [
@@ -65817,6 +65932,42 @@
           "label": "Find a Grave",
           "url": "https://www.findagrave.com/",
           "why": "Check memorials for military service inscriptions, grave photos, or veteran markers."
+        }
+      ]
+    },
+    {
+      "id": "RT_DNA_CLUSTER_A_CHR3",
+      "title": "Work Cluster A Chr 3 triangulated DNA segment",
+      "status": "Open",
+      "priority": "High",
+      "summary": "Use the Jason/Laurie/Shirley Chr 3 triangulated segment as a Lee/Blakely/Williams migration-cluster lead. Do not assign it to the older Williams paternal line until Y-DNA and paper records support that placement.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "GEDmatch One-to-One Autosomal Comparison",
+          "url": "https://www.gedmatch.com/",
+          "why": "Run and save segment comparisons for Jason, Laurie, Shirley, and Devon."
+        },
+        {
+          "label": "FamilyTreeDNA",
+          "url": "https://www.familytreedna.com/",
+          "why": "Review Family Finder and Y-DNA project matches when results post."
+        },
+        {
+          "label": "DNA Painter — WATO / shared cM tools",
+          "url": "https://dnapainter.com/tools",
+          "why": "Model relationship hypotheses once tree paths are identified."
+        },
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "Search Lee/Blakely/Williams probate, land, and marriage records along the migration corridor."
+        },
+        {
+          "label": "BLM GLO Land Records",
+          "url": "https://glorecords.blm.gov/",
+          "why": "Compare land locations for Williams, Lee, Blakely, and collateral families."
         }
       ]
     }
