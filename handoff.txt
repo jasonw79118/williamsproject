@@ -1,4 +1,4 @@
-williamsproject handoff — v0.2.0
+williamsproject handoff — v0.2.1
 Generated: 2026-07-08
 
 Purpose:
@@ -14,9 +14,10 @@ Data imported:
 - 214 families
 - Public-safe UI masking retained for living people
 
-Changes in v0.2.0:
-- Moved quick navigation from the top to a fixed right-side quick-nav rail on desktop.
+Changes in v0.2.1:
+- Moved quick navigation to a fixed left-side quick-nav rail on desktop.
 - Added mobile bottom navigation behavior for small screens.
+- Restored and front-page surfaced the known George Washington “G.W.” Williams family group: wife Nancy Adeline “Addie” Lee and children William Walter, Ida, Lucy, Rhoda, George Washington Jr., and Elisha Alson Williams.
 - Changed theme to dark blue.
 - Added a dark mode / light mode toggle.
 - Added Add My Family contributor workflow that downloads a review-ready JSON submission instead of directly changing the public tree.
@@ -64,5 +65,5 @@ Use Export JSON in the site, then replace assets/data/project-data.json in GitHu
 
 Suggested commit:
 git add .
-git commit -m "add contributor workflow and research target workspace"
+git commit -m "restore GW family group and move navigation left"
 git push origin main

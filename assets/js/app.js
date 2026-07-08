@@ -1,5 +1,5 @@
 let DATA=null;
-let state={selectedPersonId:null, peopleById:{}, familiesById:{}, localKey:'williamsproject-data-v0.2.0', themeKey:'williamsproject-theme-v0.2.0'};
+let state={selectedPersonId:null, peopleById:{}, familiesById:{}, localKey:'williamsproject-data-v0.2.1', themeKey:'williamsproject-theme-v0.2.1'};
 
 const $=sel=>document.querySelector(sel);
 const $$=sel=>Array.from(document.querySelectorAll(sel));
@@ -91,9 +91,15 @@ function renderOldestLines(){
   return `<div class="mini-card"><h3>${esc(l.name)}</h3><p><button onclick="selectPerson('${p.id}')">${esc(displayName(p))}</button></p><p class="muted">Generation ${esc(p.generationFromRoot??'')}; ${esc(years(p))}; ${esc(place(p))}</p>${confidenceChip(p.confidence)}</div>`
  }).join('');
 }
+function familyCard(familyId,title){
+ const f=state.familiesById[familyId]; if(!f)return '';
+ const husband=state.peopleById[f.husband], wife=state.peopleById[f.wife];
+ const children=(f.children||[]).map(id=>state.peopleById[id]).filter(Boolean);
+ return `<div class="mini-card featured-family"><h3>${esc(title)}</h3><p><strong>Husband:</strong> <button onclick="selectPerson('${f.husband}')">${esc(displayName(husband))}</button></p><p><strong>Wife:</strong> <button onclick="selectPerson('${f.wife}')">${esc(displayName(wife))}</button> <span class="muted">${esc(f.marriage?.date||'')} ${esc(f.marriage?.place||'')}</span></p><p><strong>Children:</strong></p><ol>${children.map(p=>`<li><button onclick="selectPerson('${p.id}')">${esc(displayName(p))}</button> <span class="muted">${esc(years(p))}</span></li>`).join('')}</ol><p class="muted">This known family group is intentionally shown on the front page so it does not get lost behind the Williams brick-wall research targets.</p></div>`;
+}
 function renderProjectSummary(){
  const m=DATA.meta.importSummary;
- $('#projectSummary').innerHTML=`<p>This Williamsproject build imports <strong>${m.people}</strong> people, <strong>${m.families}</strong> families, and <strong>${m.sources}</strong> GEDCOM source records. Confirmed paths stop where parentage becomes unknown or hypothetical; older branches remain available as research leads.</p><p><strong>Source policy:</strong> ${esc(DATA.meta.sourcePolicy)}</p><p><strong>Privacy:</strong> ${esc(DATA.meta.privacyMode)}</p><p><strong>Contribution workflow:</strong> Other Williams-connected relatives can use the <em>Add My Family</em> screen to download a review-ready submission file without editing GitHub.</p>`;
+ $('#projectSummary').innerHTML=`<p>This Williamsproject build imports <strong>${m.people}</strong> people, <strong>${m.families}</strong> families, and <strong>${m.sources}</strong> GEDCOM source records. Confirmed paths stop where parentage becomes unknown or hypothetical; older branches remain available as research leads.</p><p><strong>Source policy:</strong> ${esc(DATA.meta.sourcePolicy)}</p><p><strong>Privacy:</strong> ${esc(DATA.meta.privacyMode)}</p><p><strong>Contribution workflow:</strong> Other Williams-connected relatives can use the <em>Add My Family</em> screen to download a review-ready submission file without editing GitHub.</p>${familyCard('@F66@','Known George Washington “G.W.” Williams family')}`;
 }
 function searchPeople(q){
  q=(q||'').toLowerCase().trim();
@@ -156,8 +162,7 @@ function renderFamilyPanel(){
  let html='<div class="family-list">';
  html+=`<div class="mini-card"><h3>Parents</h3>${parents.length?parents.map(id=>`<p><button onclick="selectPerson('${id}')">${esc(personName(id))}</button></p>`).join(''):'<p class="muted">No parents listed.</p>'}</div>`;
  html+=`<div class="mini-card"><h3>Spouses</h3>${fams.length?fams.map(f=>{const sid=f.husband===pid?f.wife:f.husband; return `<p><button onclick="selectPerson('${sid}')">${esc(personName(sid))}</button><br><span class="muted">${esc(f.marriage?.date||'')} ${esc(f.marriage?.place||'')}</span></p>`}).join(''):'<p class="muted">No spouses listed.</p>'}</div>`;
- let kids=[]; fams.forEach(f=>kids.push(...(f.children||[])));
- html+=`<div class="mini-card"><h3>Children</h3>${kids.length?kids.map(id=>`<p><button onclick="selectPerson('${id}')">${esc(personName(id))}</button></p>`).join(''):'<p class="muted">No children listed.</p>'}</div>`;
+ html+=`<div class="mini-card"><h3>Children by family</h3>${fams.length?fams.map(f=>{const sid=f.husband===pid?f.wife:f.husband; const kids=f.children||[]; return `<div class="family-child-group"><h4>With ${esc(personName(sid))}</h4>${kids.length?kids.map(id=>`<p><button onclick="selectPerson('${id}')">${esc(personName(id))}</button></p>`).join(''):'<p class="muted">No children listed for this family.</p>'}</div>`}).join(''):'<p class="muted">No children listed.</p>'}</div>`;
  html+='</div>'; $('#familyPanel').innerHTML=html;
 }
 function renderPedigree(){

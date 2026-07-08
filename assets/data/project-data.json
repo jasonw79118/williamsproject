@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Williams Project",
-    "version": "0.2.0",
-    "generatedAt": "2026-07-08T21:30:00Z",
+    "version": "0.2.1",
+    "generatedAt": "2026-07-08T21:45:00Z",
     "rootPersonId": "@I36459481881@",
     "privacyMode": "UI masks living-person vital details unless public permission is marked. Because this is a static GitHub Pages site, anything committed inside project-data.json can still be viewed directly; review living-person facts before publishing.",
     "importSummary": {
@@ -1842,8 +1842,8 @@
     },
     {
       "id": "@I432603712486@",
-      "name": "G W Williams",
-      "givn": "G W",
+      "name": "George Washington “G.W.” Williams",
+      "givn": "George Washington",
       "surn": "Williams",
       "sex": "M",
       "birth": {
@@ -1882,7 +1882,8 @@
         "@F32@"
       ],
       "notes": [
-        "v0.1.1: Removed imported Ancestry-style ancestor path above George W. Williams from the confirmed tree view. Sarah Williams/Lee, Samuel Williams of the 1850 Catahoula household, the older Samuel/Lewis/John Thomas Williams chain, and Col. G.W. Williams of Tensas Parish are research leads until records or Y-DNA support them."
+        "v0.1.1: Removed imported Ancestry-style ancestor path above George W. Williams from the confirmed tree view. Sarah Williams/Lee, Samuel Williams of the 1850 Catahoula household, the older Samuel/Lewis/John Thomas Williams chain, and Col. G.W. Williams of Tensas Parish are research leads until records or Y-DNA support them.",
+        "Known family group restored: spouse Nancy Adeline “Addie” Lee and children William Walter, Ida, Lucy, Rhoda, George Washington Jr., and Elisha Alson Williams."
       ],
       "sources": [
         "@S1765044693@",
@@ -2074,7 +2075,7 @@
       "isDirectAncestor": true,
       "living": false,
       "confidence": "Most likely / Dan Williams GW Williams genealogy",
-      "researchStatus": "Core brick-wall ancestor. Parentage intentionally not attached as confirmed; review research leads.",
+      "researchStatus": "Known direct ancestor. Parentage above George remains the Williams brick-wall and should stay as research-target/candidate-only until evidence supports it.",
       "lineTags": [
         "Williams"
       ],
@@ -2107,12 +2108,13 @@
           "status": "Pending test results",
           "summary": "When the FamilyTreeDNA Y-DNA37 result posts, compare Williams project group, haplogroup, genetic distance, and earliest known paternal ancestor. Use George W. Williams as earliest proven paternal ancestor for now."
         }
-      ]
+      ],
+      "nick": "G.W."
     },
     {
       "id": "@I432603712488@",
-      "name": "Nancy Adeline 'Addie' Lee",
-      "givn": "Nancy Adeline 'Addie'",
+      "name": "Nancy Adeline “Addie” Lee Williams",
+      "givn": "Nancy Adeline “Addie”",
       "surn": "Lee",
       "sex": "F",
       "birth": {
@@ -2185,9 +2187,10 @@
       "isDirectAncestor": true,
       "living": false,
       "confidence": "Most likely / Dan Williams GW Williams genealogy",
-      "researchStatus": "Treat as reliable unless contradicted; review uncertainty notes",
+      "researchStatus": "Known wife of George Washington “G.W.” Williams; daughter of Jacob Walker Lee and Nancy Elizabeth Blakely in the working direct line.",
       "lineTags": [
-        "Lee"
+        "Lee",
+        "Williams"
       ],
       "sourceRefs": [
         "DAN_GW_REGISTER"
@@ -2570,7 +2573,9 @@
       "living": false,
       "confidence": "Most likely / Dan Williams GW Williams genealogy",
       "researchStatus": "Treat as reliable unless contradicted; review uncertainty notes",
-      "lineTags": [],
+      "lineTags": [
+        "Williams"
+      ],
       "sourceRefs": [
         "DAN_GW_REGISTER"
       ]
@@ -61875,9 +61880,12 @@
         "type": "MARR",
         "date": "1869",
         "place": "Leon Co Texas, United States",
-        "sources": []
+        "sources": [],
+        "note": "WikiTree GEDCOM family @F10 gives marriage date 1865; prior project data has 1869 Leon County, Texas. Review source images before treating the date as final."
       },
-      "notes": [],
+      "notes": [
+        "Known G.W. Williams family group verified against the uploaded WikiTree GEDCOM family @F10: husband @I14, wife @I15, children @I11, @I26, @I27, @I28, @I29, and @I30."
+      ],
       "sources": []
     },
     {

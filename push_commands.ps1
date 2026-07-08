@@ -1,3 +1,3 @@
 git add .
-git commit -m "add contributor workflow and research target workspace"
+git commit -m "restore GW family group and move navigation left"
 git push origin main
