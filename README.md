@@ -3,7 +3,7 @@
 Static GitHub Pages genealogy research site for the Williams / Lee / Blakely family project.
 
 ## Version
-v0.2.1
+v0.2.2
 
 ## Major features
 - Left-side quick navigation on desktop
@@ -23,3 +23,9 @@ git add .
 git commit -m "restore GW family group and move navigation left"
 git push origin main
 ```
+
+
+## v0.2.2 Bangs/Taylor research update
+- Added Bangs research note: Oran/Orrin Bangs 1805 birthplace conflict, possible John Bangs + Elizabeth Wheeler connection, and Edward Bangs/Plymouth line treated as a source-review lead rather than proven nobility.
+- Added Bangs research target for verifying Oran/Orrin to John Bangs and Edward Bangs.
+- Taylor side review started from Tammy Gail Taylor Williams through William Odis Taylor, William Monroe Taylor, Pard/James Parrington Taylor, and older candidate Taylor lines.

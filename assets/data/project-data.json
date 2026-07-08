@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Williams Project",
-    "version": "0.2.1",
-    "generatedAt": "2026-07-08T21:45:00Z",
+    "version": "0.2.2",
+    "generatedAt": "2026-07-08T22:05:00Z",
     "rootPersonId": "@I36459481881@",
     "privacyMode": "UI masks living-person vital details unless public permission is marked. Because this is a static GitHub Pages site, anything committed inside project-data.json can still be viewed directly; review living-person facts before publishing.",
     "importSummary": {
@@ -19441,7 +19441,9 @@
         "@F117@",
         "@F166@"
       ],
-      "notes": [],
+      "notes": [
+        "Orrin/Oran birthplace conflict: working file lists Ohio; public compiled profiles often list Maine and connect him to John Bangs and probable mother Elizabeth Wheeler. Treat as medium-confidence until source-reviewed."
+      ],
       "sources": [
         "@S1765044623@",
         "@S1765052959@",
@@ -19505,7 +19507,7 @@
       "generationFromRoot": 6,
       "isDirectAncestor": true,
       "living": false,
-      "confidence": "Candidate / imported from Ancestry GEDCOM",
+      "confidence": "Medium confidence / needs source review",
       "researchStatus": "Needs source review",
       "lineTags": [
         "Bangs"
@@ -65434,7 +65436,7 @@
     "Williams": "The confirmed Williams line is anchored in Jason Elon Williams and descends through Robert Elon Williams II, Robert Elon Williams, Elisha Alson Williams, and George Washington Williams. The older Williams paternal line remains a brick-wall research problem until Y-DNA and primary records support a parentage claim.",
     "Lee": "The Lee line currently runs through Nancy Adeline “Addie” Lee, daughter of Jacob Walker Lee and Nancy Blakely. A key open question is whether Sarah Williams/Lee in George W. Williams’s childhood household connects to Zachariah Lee and whether that Lee line was related to Jacob Walker Lee.",
     "Blakely": "The Blakely/Blakley line runs through Nancy Blakely, wife of Jacob Walker Lee. The current tree includes John William Blakely and Elizabeth Smith, but the older Blakely parentage requires proof because multiple compiled trees conflict.",
-    "Bangs": "The Bangs line is one of the deepest imported lines in the GEDCOM, reaching early New England/English candidates. Treat the deep medieval/early colonial stretch as candidate until source reviewed.",
+    "Bangs": "The Bangs line reaches Oran/Orrin Bangs, born about 1805. The project working file currently lists Ohio as his birthplace, while public compiled profiles often place him in Maine and connect him to John Bangs, with Elizabeth Wheeler as probable mother. Treat the Oran/Orrin birthplace and parentage as medium-confidence research leads needing source review. If confirmed through John Bangs, the line likely connects to the early New England Bangs family descended from Edward Bangs, an English immigrant to Plymouth Colony on the Anne in 1623. No proven nobility, coat-of-arms entitlement, or direct monarchy service is currently established.",
     "Miller-Mueller": "The Miller/Mueller line includes American Miller ancestors and Germanic Mueller/Dotterer/Goebel-style candidate lines. Several generations go deep into Europe and should be reviewed source-by-source.",
     "Taylor": "The Taylor line is traced through William Odis Taylor and earlier Taylor/Murphy/Morrow-linked families in the imported tree. Review county-level records before promoting distant generations.",
     "Duck": "The Duck line currently traces from Velma Duck through John Franklin Duck and older Tennessee/North Carolina Duck candidates.",
@@ -65715,6 +65717,41 @@
       ],
       "workingNote": "",
       "log": []
+    },
+    {
+      "id": "RT-BANGS-ORAN-EDWARD",
+      "title": "Verify Oran/Orrin Bangs to John Bangs and Edward Bangs line",
+      "family": "Bangs",
+      "priority": "Medium",
+      "status": "Open",
+      "summary": "Resolve the Oran/Orrin Bangs birthplace conflict and verify the chain from Oran/Orrin Bangs to John Bangs, Elizabeth Wheeler, and the early New England/Edward Bangs line before treating the English Plymouth connection as proven.",
+      "notes": "Working file has Oran Bangs born about 1805 in Ohio; public compiled profiles often list Orrin/Oran born 1805 in Maine, son of John Bangs and Elizabeth Wheeler. Need primary/near-primary records.",
+      "sourceLinks": [
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog"
+        },
+        {
+          "label": "FamilySearch Records",
+          "url": "https://www.familysearch.org/search/record/results?q.surname=Bangs"
+        },
+        {
+          "label": "Mayflower Society",
+          "url": "https://themayflowersociety.org/"
+        },
+        {
+          "label": "Pilgrim Hall Museum - Edward Bangs",
+          "url": "https://www.pilgrimhall.org/edward-bangs/"
+        },
+        {
+          "label": "Maine State Archives",
+          "url": "https://www.maine.gov/sos/arc/"
+        },
+        {
+          "label": "Ohio Genealogical Society",
+          "url": "https://www.ogs.org/"
+        }
+      ]
     }
   ],
   "confidenceLevels": [
