@@ -1,5 +1,5 @@
 let DATA=null;
-let state={selectedPersonId:null, peopleById:{}, familiesById:{}, localKey:'williamsproject-data-v0.1.0'};
+let state={selectedPersonId:null, peopleById:{}, familiesById:{}, localKey:'williamsproject-data-v0.1.1'};
 
 const $=sel=>document.querySelector(sel);
 const $$=sel=>Array.from(document.querySelectorAll(sel));
@@ -40,7 +40,7 @@ function renderAll(){
 }
 function years(p){let b=p.birth?.date||'', d=p.death?.date||''; return [b,d].filter(Boolean).join(' – ')}
 function place(p){return p.birth?.place||p.death?.place||''}
-function confidenceChip(conf){let cls='chip'; if(/Hypothesis|Conflicting/.test(conf))cls+=' danger'; else if(/Candidate/.test(conf))cls+=' warn'; return `<span class="${cls}">${esc(conf||'Unrated')}</span>`}
+function confidenceChip(conf){let cls='chip'; if(/Hypothesis|Conflicting|Research lead|Unconfirmed/.test(conf))cls+=' danger'; else if(/Candidate|Needs|Imported/.test(conf))cls+=' warn'; return `<span class="${cls}">${esc(conf||'Unrated')}</span>`}
 function personName(id){return state.peopleById[id]?.name||'Unknown person'}
 function personLine(p){return `${esc(p.name)} ${p.living?'<span class="chip">Living masked</span>':''}`}
 
@@ -76,7 +76,7 @@ function renderOldestLines(){
 }
 function renderProjectSummary(){
  const m=DATA.meta.importSummary;
- $('#projectSummary').innerHTML=`<p>This first Williamsproject build imports <strong>${m.people}</strong> people, <strong>${m.families}</strong> families, and <strong>${m.sources}</strong> GEDCOM source records. The direct ancestor chain currently reaches generation <strong>${m.maxGeneration}</strong>.</p><p><strong>Source policy:</strong> ${esc(DATA.meta.sourcePolicy)}</p><p><strong>Privacy:</strong> ${esc(DATA.meta.privacyMode)}</p>`;
+ $('#projectSummary').innerHTML=`<p>This Williamsproject build imports <strong>${m.people}</strong> people, <strong>${m.families}</strong> families, and <strong>${m.sources}</strong> GEDCOM source records. Confirmed paths stop where parentage becomes unknown or hypothetical; older branches remain available as research leads.</p><p><strong>Source policy:</strong> ${esc(DATA.meta.sourcePolicy)}</p><p><strong>Privacy:</strong> ${esc(DATA.meta.privacyMode)}</p>`;
 }
 function searchPeople(q){
  q=(q||'').toLowerCase().trim();
@@ -104,10 +104,36 @@ function getParents(pid){
  let out=[]; (p.famc||[]).forEach(fid=>{const f=state.familiesById[fid]; if(f){ if(f.husband)out.push(f.husband); if(f.wife)out.push(f.wife); }}); return out.filter(Boolean);
 }
 function getFamiliesAsSpouse(pid){return DATA.families.filter(f=>f.husband===pid||f.wife===pid)}
+function isUnconfirmedPerson(p){
+ if(!p)return true;
+ const conf=p.confidence||'', status=p.researchStatus||'', name=p.name||'';
+ return /Unknown/i.test(name)||/Hypothesis|Candidate|Conflicting|Research lead|Unconfirmed/i.test(conf)||/not treat as proven|detached|research lead only|unknown parentage/i.test(status);
+}
+function getConfirmedParents(pid){
+ return getParents(pid).filter(id=>!isUnconfirmedPerson(state.peopleById[id]));
+}
+function personResearchLeads(p){
+ const leads=[...(p.researchLeads||[])];
+ const parents=getParents(p.id).map(id=>state.peopleById[id]).filter(Boolean);
+ parents.filter(isUnconfirmedPerson).forEach(parent=>{
+   leads.push({title:`Possible parent or upstream lead: ${parent.name}`,status:parent.confidence||'Unconfirmed',summary:parent.researchStatus||'This parent/ancestor is present in imported data but is not treated as confirmed.'});
+ });
+ if(!parents.length){
+   leads.push({title:'No confirmed parents attached',status:'Open',summary:'The confirmed ancestor path stops here. Add parents only when the evidence supports the relationship, or add them as research leads first.'});
+ }
+ return leads;
+}
 function renderAncestorPath(){
- const p=state.peopleById[state.selectedPersonId];
+ const p=state.peopleById[state.selectedPersonId]; if(!p)return;
+ const leads=personResearchLeads(p);
+ if(leads.length){
+   $('#ancestorPathTitle').textContent='Research leads instead of ancestor path';
+   $('#ancestorPath').innerHTML=`<div class="source-card"><p><strong>Confirmed path pauses here.</strong> One or more parent links are unknown, hypothetical, or detached. Use these leads until the relationship is supported.</p></div>`+leads.map(l=>`<div class="mini-card"><h3>${esc(l.title)}</h3><div class="chips"><span class="chip warn">${esc(l.status||'Open')}</span></div><p>${esc(l.summary||'')}</p></div>`).join('');
+   return;
+ }
+ $('#ancestorPathTitle').textContent='Confirmed ancestor path';
  let current=p, path=[];
- while(current){ path.push(current); const parents=getParents(current.id); current=parents[0]?state.peopleById[parents[0]]:null; if(path.length>20)break; }
+ while(current){ path.push(current); const parents=getConfirmedParents(current.id); current=parents[0]?state.peopleById[parents[0]]:null; if(path.length>20)break; }
  $('#ancestorPath').innerHTML=path.map(p=>`<button onclick="selectPerson('${p.id}')">${esc(p.name)}</button>`).join(' › ');
 }
 function renderFamilyPanel(){
@@ -124,10 +150,10 @@ function renderPedigree(){
  function node(pid,depth){
    if(!pid||depth>6)return '';
    const p=state.peopleById[pid]; if(!p)return '';
-   const parents=getParents(pid);
+   const parents=getConfirmedParents(pid);
    return `<li><button onclick="selectPerson('${pid}')">${esc(p.name)}</button> <span class="muted">${esc(years(p))}</span>${parents.length?`<ul>${parents.map(id=>node(id,depth+1)).join('')}</ul>`:''}</li>`;
  }
- $('#pedigree').innerHTML=`<ul>${node(state.selectedPersonId,0)}</ul>`;
+ $('#pedigree').innerHTML=`<ul>${node(state.selectedPersonId,0)}</ul><p class="muted">Pedigree view shows confirmed/most-likely parent links only. Hypothetical or unknown upstream links are shown as research leads.</p>`;
 }
 function renderPeopleTable(){
  const q=$('#peopleSearch').value||'', conf=$('#confidenceFilter').value||'', line=$('#lineFilter').value||'';

@@ -1,5 +1,5 @@
-williamsproject handoff — v0.1.0
-Generated: 2026-07-08T18:47:05.364713Z
+williamsproject handoff — v0.1.1
+Generated: 2026-07-08
 
 Purpose:
 A GitHub Pages-ready static site for Jason Williams's genealogy research project.
@@ -11,10 +11,16 @@ Data imported:
 - Jason Williams Family Tree.ged
 - 816 people
 - 214 families
-- 97 GEDCOM source records
+- Public-safe living-person masking retained
 
-Privacy:
-Living people are masked in the packaged public dataset. Birth/death details and notes are removed from living profiles.
+Changes in v0.1.1:
+- Removed the imported Ancestry/GEDCOM ancestor path above George W. Williams from the confirmed Williams line.
+- George W. Williams now stops the confirmed Williams path.
+- Sarah Williams/Lee, Samuel Williams in the 1850 Catahoula household, Col. G.W. Williams of Tensas Parish, and the older Samuel/Lewis/John Thomas Williams chain are preserved as research leads.
+- Unknown, candidate, hypothesis, conflicting, or imported-only upstream links are displayed as research leads instead of a confirmed ancestor path.
+- Pedigree view now walks confirmed/most-likely parentage only and pauses at uncertain links.
+- Williams Research Leads was added as a separate line summary.
+- GitHub Pages workflow now includes configure-pages enablement: true.
 
 Current project policy:
 - Dan Williams / Modified Register for George Washington Williams is treated as most likely / confirmed unless contradicted or unless Dan's own notes flag uncertainty.
@@ -23,12 +29,13 @@ Current project policy:
 
 Important built-in research targets:
 1. George W. Williams parentage / Sarah Williams-Lee identity.
-2. Y-DNA37 Williams placement once results return.
-3. MCR 1743 / Addie Lee testimony.
-4. Jacob Walker Lee and Zachariah Lee relationship.
-5. John William Blakely parentage.
-6. Little John Smith / Elizabeth Hanna / Newsom conflict.
-7. Nancy Williams Little / Basden watch-list lead.
+2. Detached older Williams ancestry path.
+3. Y-DNA37 Williams placement once results return.
+4. MCR 1743 / Addie Lee testimony.
+5. Jacob Walker Lee and Zachariah Lee relationship.
+6. John William Blakely parentage.
+7. Little John Smith / Elizabeth Hanna / Newsom conflict.
+8. Nancy Williams Little / Basden watch-list lead.
 
 Important built-in DNA cluster:
 Cluster A — Chr 3: 4,340,847–19,436,587
