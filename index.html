@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Williamsproject</title>
+  <title>Williams Project</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <header class="app-header">
     <div>
-      <h1>Williamsproject</h1>
+      <h1>Williams Project</h1>
       <p id="subtitle">A living research site for the Williams, Lee, Blakely, Bangs, Miller/Mueller, Taylor, Duck, and Drake family story.</p>
     </div>
     <div class="header-actions">
-      <span class="badge" id="versionBadge">v0.1.1</span>
+      <span class="badge" id="versionBadge">v0.2.0</span>
+      <button id="themeToggle" class="secondary" type="button">Dark mode</button>
       <button id="exportBtn" class="secondary">Export JSON</button>
       <label class="file-btn secondary">Import JSON<input id="importFile" type="file" accept="application/json" hidden></label>
       <button id="resetBtn" class="danger">Reset local edits</button>
@@ -31,6 +32,7 @@
     <button data-tab="dna">DNA Clusters</button>
     <button data-tab="research">Research Targets</button>
     <button data-tab="sources">Sources</button>
+    <button data-tab="contribute">Add My Family</button>
     <button data-tab="edit">Edit / Add</button>
   </nav>
 
@@ -95,6 +97,7 @@
     <section id="research" class="tab-panel">
       <div class="card">
         <h2>Research targets</h2>
+        <p class="muted">Work these targets directly from this screen. Change priority/status, save notes, copy the target summary, and open source links in a new tab. Browser edits are local until you export JSON and publish it.</p>
         <div id="researchList" class="stack"></div>
       </div>
     </section>
@@ -104,6 +107,52 @@
         <h2>Sources</h2>
         <input id="sourceSearch" type="search" placeholder="Search sources..." />
         <div id="sourceList" class="stack"></div>
+      </div>
+    </section>
+
+    <section id="contribute" class="tab-panel">
+      <div class="grid two">
+        <div class="card">
+          <h2>Add My Family to the Williams Project</h2>
+          <p>This form is for Williams-connected relatives, Lee/Blakely collateral relatives, DNA matches, and family researchers. It creates a review file instead of directly changing the public tree.</p>
+          <form id="familySubmissionForm">
+            <label>Your name<input name="submitterName" required placeholder="Full name"></label>
+            <label>Email<input name="submitterEmail" type="email" placeholder="name@example.com"></label>
+            <label><input type="checkbox" name="contactOk" checked> Jason may contact me about this submission</label>
+            <label>How do you connect?
+              <select name="knownAncestor">
+                <option>Descendant of George Washington Williams</option>
+                <option>Descendant of Nancy Adeline “Addie” Lee</option>
+                <option>Lee family connection</option>
+                <option>Blakely / Blakeley / Blakeney family connection</option>
+                <option>Williams DNA match / connection unknown</option>
+                <option>Other connected family</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label>Connection path<textarea name="connectionPath" rows="5" placeholder="Me → my parent → my grandparent → George Washington Williams"></textarea></label>
+            <label>Family members to add<textarea name="familyMembers" rows="8" placeholder="Add one person per line with dates, places, spouse, parents, children, and whether living/private."></textarea></label>
+            <label>DNA information<textarea name="dna" rows="4" placeholder="GEDmatch kit, FTDNA kit, Ancestry username, Y-DNA level, cM, chromosome segment, etc."></textarea></label>
+            <label>Surnames<input name="surnames" placeholder="Williams, Lee, Blakely, Harman, Poole..."></label>
+            <label>Locations<input name="locations" placeholder="Catahoula LA, Newton MS, Leon TX, Freestone TX..."></label>
+            <label>Sources / documents<textarea name="sources" rows="5" placeholder="Census, Bible record, obituary, photo, deed, probate file, Find A Grave, WikiTree, Ancestry, etc."></textarea></label>
+            <label>Public display permission
+              <select name="publicPermission">
+                <option>Hide living people by default</option>
+                <option>Show initials only for living people</option>
+                <option>Show full name only where permission is clearly given</option>
+              </select>
+            </label>
+            <label>Notes<textarea name="notes" rows="4"></textarea></label>
+            <button type="submit">Download family submission file</button>
+          </form>
+        </div>
+        <div class="card">
+          <h2>Contributor guide</h2>
+          <p><strong>Best evidence:</strong> original records, census images, marriage records, probate, deeds, military records, cemetery records, Bible pages, and DNA segment details.</p>
+          <p><strong>Privacy:</strong> living people should be hidden or reviewed before public display. A static GitHub Pages site cannot truly protect private facts once they are committed to the repository.</p>
+          <p><strong>Research status:</strong> unproven Williams parentage, Sarah Williams/Lee, Samuel Williams, and older Williams chains stay as research leads until supported by records or DNA.</p>
+        </div>
       </div>
     </section>
 
@@ -121,6 +170,9 @@
             <label>Surname<input name="surn" placeholder="Surname"></label>
             <label>Sex<select name="sex"><option value="">Unknown</option><option value="M">Male</option><option value="F">Female</option></select></label>
             <label>Line tag<select name="lineTag" id="addLineTag"><option value="">No line tag</option></select></label>
+            <label>Public label for living/private display<input name="publicLabel" placeholder="Living Williams descendant"></label>
+            <label><input type="checkbox" name="living"> Living person</label>
+            <label><input type="checkbox" name="publicPermission"> Permission to show full name/details publicly</label>
             <label>Relationship to selected person<select name="relationship"><option value="none">No relationship yet</option><option value="parent">Parent of selected person</option><option value="child">Child of selected person</option><option value="spouse">Spouse of selected person</option></select></label>
             <label>Birth date<input name="birthDate" placeholder="24 Nov 1843"></label>
             <label>Birth place<input name="birthPlace" placeholder="County, State"></label>
@@ -136,6 +188,7 @@
             <label>Priority<select name="priority"><option>High</option><option>Medium</option><option>Low</option></select></label>
             <label>Status<input name="status" value="Open"></label>
             <label>Summary<textarea name="summary" rows="4"></textarea></label>
+            <label>Source links <span class="muted">one per line: Label | URL | Why useful</span><textarea name="links" rows="5"></textarea></label>
             <button type="submit">Add target</button>
           </form>
         </div>
@@ -144,7 +197,7 @@
   </main>
 
   <footer>
-    <span>Williamsproject</span><span id="footerVersion"></span><span>Public-safe genealogy research site</span>
+    <span>Williams Project</span><span id="footerVersion"></span><span>Public-safe genealogy research site</span>
   </footer>
 
   <script src="assets/js/app.js"></script>

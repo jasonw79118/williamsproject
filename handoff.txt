@@ -1,26 +1,47 @@
-williamsproject handoff — v0.1.1
+williamsproject handoff — v0.2.0
 Generated: 2026-07-08
 
 Purpose:
-A GitHub Pages-ready static site for Jason Williams's genealogy research project.
+A GitHub Pages-ready static genealogy research site for Jason Williams and the Williams / Lee / Blakely migration-cluster project.
 
 Repository target:
 williamsproject
 
 Data imported:
-- Jason Williams Family Tree.ged
-- 816 people
+- WikiTree GEDCOM file supplied 2026-07-08
+- Existing project-data.json retained and patched
+- 817 people
 - 214 families
-- Public-safe living-person masking retained
+- Public-safe UI masking retained for living people
 
-Changes in v0.1.1:
-- Removed the imported Ancestry/GEDCOM ancestor path above George W. Williams from the confirmed Williams line.
-- George W. Williams now stops the confirmed Williams path.
-- Sarah Williams/Lee, Samuel Williams in the 1850 Catahoula household, Col. G.W. Williams of Tensas Parish, and the older Samuel/Lewis/John Thomas Williams chain are preserved as research leads.
-- Unknown, candidate, hypothesis, conflicting, or imported-only upstream links are displayed as research leads instead of a confirmed ancestor path.
-- Pedigree view now walks confirmed/most-likely parentage only and pauses at uncertain links.
-- Williams Research Leads was added as a separate line summary.
-- GitHub Pages workflow now includes configure-pages enablement: true.
+Changes in v0.2.0:
+- Moved quick navigation from the top to a fixed right-side quick-nav rail on desktop.
+- Added mobile bottom navigation behavior for small screens.
+- Changed theme to dark blue.
+- Added a dark mode / light mode toggle.
+- Added Add My Family contributor workflow that downloads a review-ready JSON submission instead of directly changing the public tree.
+- Made Research Targets workable directly from the Research Targets screen:
+  * edit priority
+  * edit status
+  * save working notes
+  * copy target summaries
+  * open potential source links
+- Added potential source links to built-in research targets, including FamilySearch Catalog, BLM GLO, NARA Catalog, Louisiana records, South Carolina Archives, Mississippi Archives, FTDNA, GEDmatch, and related source hubs.
+- Added / corrected close-family living entries from user-provided information:
+  * Jason Elon Williams
+  * Robert Elon Williams II
+  * Tammy Gail (Taylor) Williams
+  * Ryanne Danielle (Harman) Williams
+  * Grayson Elon Williams
+  * Ryker Austin Williams
+  * Nolan David Williams
+  * April Dawn (Williams) Robel
+  * Kendall (Adams) Harman
+  * Glenn Harman
+- Updated DNA Cluster A wording so Devon Rothchild is treated as close-family support to Laurie rather than an independent fourth triangulated member unless direct segment comparisons support it.
+
+Privacy warning:
+This is a static GitHub Pages project. UI masking hides living details from the normal page view, but any facts committed into assets/data/project-data.json can still be downloaded or viewed directly by the public. Review living-person facts before publishing.
 
 Current project policy:
 - Dan Williams / Modified Register for George Washington Williams is treated as most likely / confirmed unless contradicted or unless Dan's own notes flag uncertainty.
@@ -36,11 +57,12 @@ Important built-in research targets:
 6. John William Blakely parentage.
 7. Little John Smith / Elizabeth Hanna / Newsom conflict.
 8. Nancy Williams Little / Basden watch-list lead.
-
-Important built-in DNA cluster:
-Cluster A — Chr 3: 4,340,847–19,436,587
-Jason WP2969985 + Shirley Jane Greene Lee T780066 + Devon Rothchild M850975 triangulated.
-Common ancestor unknown.
+9. Williams relative submissions and family-branch intake.
 
 How to publish edits:
 Use Export JSON in the site, then replace assets/data/project-data.json in GitHub and push.
+
+Suggested commit:
+git add .
+git commit -m "add contributor workflow and research target workspace"
+git push origin main

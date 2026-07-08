@@ -1,27 +1,34 @@
 {
   "meta": {
-    "title": "Williamsproject",
-    "version": "0.1.1",
-    "generatedAt": "2026-07-08T19:29:20Z",
+    "title": "Williams Project",
+    "version": "0.2.0",
+    "generatedAt": "2026-07-08T21:30:00Z",
     "rootPersonId": "@I36459481881@",
-    "privacyMode": "Public-safe redaction: living people are masked and vital details removed.",
+    "privacyMode": "UI masks living-person vital details unless public permission is marked. Because this is a static GitHub Pages site, anything committed inside project-data.json can still be viewed directly; review living-person facts before publishing.",
     "importSummary": {
-      "people": 816,
+      "people": 817,
       "families": 214,
       "sources": 97,
       "directAncestorsIncludingRoot": 215,
       "maxGeneration": 4
     },
-    "sourcePolicy": "Dan Williams / GW Williams Register information is treated as most likely unless Dan noted uncertainty or later evidence disproves it. Imported Ancestry/GEDCOM ancestor paths are not shown as confirmed when parentage is unknown, conflicting, or hypothetical; those branches are held as research leads until evidence supports them."
+    "sourcePolicy": "Dan Williams / GW Williams Register information is treated as most likely unless Dan noted uncertainty or later evidence disproves it. Imported Ancestry/GEDCOM ancestor paths are not shown as confirmed when parentage is unknown, conflicting, or hypothetical; those branches are held as research leads until evidence supports them. Living-person additions from Jason Williams are treated as close-family entries and should be reviewed before public release."
   },
   "people": [
     {
       "id": "@I36459481881@",
-      "name": "Living Williams (site owner)",
-      "givn": "Living",
+      "name": "Jason Elon Williams",
+      "givn": "Jason Elon",
       "surn": "Williams",
       "sex": "M",
-      "birth": {},
+      "birth": {
+        "type": "BIRT",
+        "date": "23 Aug 1985",
+        "place": "Amarillo, Potter, Texas, United States",
+        "value": "",
+        "sources": [],
+        "notes": []
+      },
       "death": {},
       "burial": {},
       "famc": [
@@ -30,7 +37,9 @@
       "fams": [
         "@F3@"
       ],
-      "notes": [],
+      "notes": [
+        "Site owner. Root person for the public Williams Project site."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -40,18 +49,27 @@
       "isDirectAncestor": true,
       "living": true,
       "confidence": "Confirmed / close family or core source",
-      "researchStatus": "Core family line",
+      "researchStatus": "Site owner / close family line; confirmed by user-supplied WikiTree GEDCOM and close-family knowledge.",
       "lineTags": [
         "Williams"
-      ]
+      ],
+      "publicLabel": "Jason Elon Williams",
+      "publicPermission": true
     },
     {
       "id": "@I36459481882@",
-      "name": "Living Williams",
-      "givn": "Living",
+      "name": "Robert Elon Williams II",
+      "givn": "Robert Elon",
       "surn": "Williams",
       "sex": "M",
-      "birth": {},
+      "birth": {
+        "type": "BIRT",
+        "date": "1 May 1960",
+        "place": "Amarillo, Potter, Texas, United States",
+        "value": "",
+        "sources": [],
+        "notes": []
+      },
       "death": {},
       "burial": {},
       "famc": [
@@ -60,7 +78,9 @@
       "fams": [
         "@F21@"
       ],
-      "notes": [],
+      "notes": [
+        "User-supplied correction: Robert Elon Williams II, born 1 May 1960 in Amarillo, Texas. Living-person details should be reviewed before public display."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -70,10 +90,12 @@
       "isDirectAncestor": true,
       "living": true,
       "confidence": "Confirmed / close family or core source",
-      "researchStatus": "Core family line",
+      "researchStatus": "Father of Jason Williams; close-family living entry.",
       "lineTags": [
         "Williams"
-      ]
+      ],
+      "publicLabel": "Robert Elon Williams II — living/private",
+      "publicPermission": false
     },
     {
       "id": "@I36459481883@",
@@ -379,11 +401,18 @@
     },
     {
       "id": "@I36459482082@",
-      "name": "Living Taylor",
-      "givn": "Living",
+      "name": "Tammy Gail Taylor Williams",
+      "givn": "Tammy Gail",
       "surn": "Taylor",
       "sex": "F",
-      "birth": {},
+      "birth": {
+        "type": "BIRT",
+        "date": "12 Jul 1960",
+        "place": "Lamar County, Texas, United States",
+        "value": "",
+        "sources": [],
+        "notes": []
+      },
       "death": {},
       "burial": {},
       "famc": [
@@ -392,7 +421,9 @@
       "fams": [
         "@F21@"
       ],
-      "notes": [],
+      "notes": [
+        "User-supplied correction: Tammy Gail (Taylor) Williams, born 12 Jul 1960 in Lamar County, Texas. Living-person details should be reviewed before public display."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -402,10 +433,12 @@
       "isDirectAncestor": true,
       "living": true,
       "confidence": "Confirmed / close family or core source",
-      "researchStatus": "Core family line",
+      "researchStatus": "Mother of Jason Williams; close-family living entry.",
       "lineTags": [
         "Taylor"
-      ]
+      ],
+      "publicLabel": "Tammy Gail (Taylor) Williams — living/private",
+      "publicPermission": false
     },
     {
       "id": "@I36459482084@",
@@ -6947,11 +6980,18 @@
     },
     {
       "id": "@I432603797855@",
-      "name": "Living Harman",
-      "givn": "Living",
+      "name": "Ryanne Danielle Harman Williams",
+      "givn": "Ryanne Danielle",
       "surn": "Harman",
       "sex": "F",
-      "birth": {},
+      "birth": {
+        "type": "BIRT",
+        "date": "15 Jan 1987",
+        "place": "Amarillo, Potter, Texas, United States",
+        "value": "",
+        "sources": [],
+        "notes": []
+      },
       "death": {},
       "burial": {},
       "famc": [
@@ -6960,7 +7000,9 @@
       "fams": [
         "@F3@"
       ],
-      "notes": [],
+      "notes": [
+        "User-supplied close-family entry. Living-person details should be reviewed before public display."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -6970,7 +7012,7 @@
       "isDirectAncestor": false,
       "living": true,
       "confidence": "Candidate / imported from Ancestry GEDCOM",
-      "researchStatus": "Needs source review",
+      "researchStatus": "Spouse of Jason Williams; close-family living entry.",
       "lineTags": [],
       "researchLeads": [
         {
@@ -6978,12 +7020,14 @@
           "status": "Needs review",
           "summary": "Use this as a research lead rather than a confirmed ancestor path until supporting records are attached."
         }
-      ]
+      ],
+      "publicLabel": "Ryanne Danielle (Harman) Williams — living/private",
+      "publicPermission": false
     },
     {
       "id": "@I432603797869@",
-      "name": "Living Adams",
-      "givn": "Living",
+      "name": "Kendall Adams Harman",
+      "givn": "Kendall",
       "surn": "Adams",
       "sex": "F",
       "birth": {},
@@ -6995,7 +7039,9 @@
       "fams": [
         "@F22@"
       ],
-      "notes": [],
+      "notes": [
+        "User-supplied close-family entry."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -7005,7 +7051,7 @@
       "isDirectAncestor": false,
       "living": true,
       "confidence": "Candidate / imported from Ancestry GEDCOM",
-      "researchStatus": "Needs source review",
+      "researchStatus": "Mother of Ryanne Danielle (Harman) Williams; close-family living entry.",
       "lineTags": [],
       "researchLeads": [
         {
@@ -7013,12 +7059,14 @@
           "status": "Needs review",
           "summary": "Use this as a research lead rather than a confirmed ancestor path until supporting records are attached."
         }
-      ]
+      ],
+      "publicLabel": "Kendall (Adams) Harman — living/private",
+      "publicPermission": false
     },
     {
       "id": "@I432603797870@",
-      "name": "Living Harman",
-      "givn": "Living",
+      "name": "Glenn Harman",
+      "givn": "Glenn",
       "surn": "Harman",
       "sex": "M",
       "birth": {},
@@ -7030,7 +7078,9 @@
       "fams": [
         "@F22@"
       ],
-      "notes": [],
+      "notes": [
+        "User-supplied close-family entry."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -7040,7 +7090,7 @@
       "isDirectAncestor": false,
       "living": true,
       "confidence": "Candidate / imported from Ancestry GEDCOM",
-      "researchStatus": "Needs source review",
+      "researchStatus": "Father of Ryanne Danielle (Harman) Williams; close-family living entry.",
       "lineTags": [],
       "researchLeads": [
         {
@@ -7048,7 +7098,9 @@
           "status": "Needs review",
           "summary": "Use this as a research lead rather than a confirmed ancestor path until supporting records are attached."
         }
-      ]
+      ],
+      "publicLabel": "Glenn Harman — living/private",
+      "publicPermission": false
     },
     {
       "id": "@I432603798510@",
@@ -17444,18 +17496,27 @@
     },
     {
       "id": "@I432603810855@",
-      "name": "Living Williams",
-      "givn": "Living",
+      "name": "Grayson Elon Williams",
+      "givn": "Grayson Elon",
       "surn": "Williams",
       "sex": "M",
-      "birth": {},
+      "birth": {
+        "type": "BIRT",
+        "date": "14 May 2018",
+        "place": "Amarillo, Potter, Texas, United States",
+        "value": "",
+        "sources": [],
+        "notes": []
+      },
       "death": {},
       "burial": {},
       "famc": [
         "@F3@"
       ],
       "fams": [],
-      "notes": [],
+      "notes": [
+        "User-supplied close-family entry. Minor child; keep private unless explicit permission and privacy review are completed."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -17465,7 +17526,7 @@
       "isDirectAncestor": false,
       "living": true,
       "confidence": "Hypothesis / Williams brick-wall candidate",
-      "researchStatus": "Do not treat as proven until Y-DNA and records support it",
+      "researchStatus": "Child of Jason and Ryanne Williams; close-family living entry.",
       "lineTags": [
         "Williams"
       ],
@@ -17475,22 +17536,33 @@
           "status": "Needs review",
           "summary": "Use this as a research lead rather than a confirmed ancestor path until supporting records are attached."
         }
-      ]
+      ],
+      "publicLabel": "Living Williams child — private",
+      "publicPermission": false
     },
     {
       "id": "@I432603810902@",
-      "name": "Living Williams",
-      "givn": "Living",
+      "name": "Ryker Austin Williams",
+      "givn": "Ryker Austin",
       "surn": "Williams",
       "sex": "M",
-      "birth": {},
+      "birth": {
+        "type": "BIRT",
+        "date": "2019",
+        "place": "Amarillo, Potter, Texas, United States",
+        "value": "",
+        "sources": [],
+        "notes": []
+      },
       "death": {},
       "burial": {},
       "famc": [
         "@F3@"
       ],
       "fams": [],
-      "notes": [],
+      "notes": [
+        "User-supplied close-family entry. Minor child; keep private unless explicit permission and privacy review are completed."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -17500,7 +17572,7 @@
       "isDirectAncestor": false,
       "living": true,
       "confidence": "Hypothesis / Williams brick-wall candidate",
-      "researchStatus": "Do not treat as proven until Y-DNA and records support it",
+      "researchStatus": "Child of Jason and Ryanne Williams; close-family living entry.",
       "lineTags": [
         "Williams"
       ],
@@ -17510,22 +17582,33 @@
           "status": "Needs review",
           "summary": "Use this as a research lead rather than a confirmed ancestor path until supporting records are attached."
         }
-      ]
+      ],
+      "publicLabel": "Living Williams child — private",
+      "publicPermission": false
     },
     {
       "id": "@I432603810952@",
-      "name": "Living Williams",
-      "givn": "Living",
+      "name": "Nolan David Williams",
+      "givn": "Nolan David",
       "surn": "Williams",
       "sex": "M",
-      "birth": {},
+      "birth": {
+        "type": "BIRT",
+        "date": "9 Nov 2022",
+        "place": "Amarillo, Potter, Texas, United States",
+        "value": "",
+        "sources": [],
+        "notes": []
+      },
       "death": {},
       "burial": {},
       "famc": [
         "@F3@"
       ],
       "fams": [],
-      "notes": [],
+      "notes": [
+        "User-supplied close-family entry. Minor child; keep private unless explicit permission and privacy review are completed."
+      ],
       "sources": [],
       "facts": [],
       "media": [],
@@ -17535,7 +17618,7 @@
       "isDirectAncestor": false,
       "living": true,
       "confidence": "Hypothesis / Williams brick-wall candidate",
-      "researchStatus": "Do not treat as proven until Y-DNA and records support it",
+      "researchStatus": "Child of Jason and Ryanne Williams; close-family living entry.",
       "lineTags": [
         "Williams"
       ],
@@ -17545,7 +17628,9 @@
           "status": "Needs review",
           "summary": "Use this as a research lead rather than a confirmed ancestor path until supporting records are attached."
         }
-      ]
+      ],
+      "publicLabel": "Living Williams child — private",
+      "publicPermission": false
     },
     {
       "id": "@I432603811068@",
@@ -60625,6 +60710,38 @@
           "summary": "Use this as a research lead rather than a confirmed ancestor path until supporting records are attached."
         }
       ]
+    },
+    {
+      "id": "@USER_APRIL_DAWN_ROBEL@",
+      "name": "April Dawn Williams Robel",
+      "publicLabel": "April Dawn (Williams) Robel — living/private",
+      "givn": "April Dawn",
+      "surn": "Williams",
+      "sex": "F",
+      "birth": {},
+      "death": {},
+      "burial": {},
+      "famc": [
+        "@F21@"
+      ],
+      "fams": [],
+      "notes": [
+        "User-supplied close-family entry: sister of Jason Williams. Living-person details should be reviewed before public display."
+      ],
+      "sources": [],
+      "facts": [],
+      "media": [],
+      "birthYear": null,
+      "deathYear": null,
+      "generationFromRoot": 0,
+      "isDirectAncestor": false,
+      "living": true,
+      "publicPermission": false,
+      "confidence": "Confirmed / close family or core source",
+      "researchStatus": "Sister of Jason Williams; close-family living entry.",
+      "lineTags": [
+        "Williams"
+      ]
     }
   ],
   "families": [
@@ -61000,7 +61117,8 @@
       "husband": "@I36459481882@",
       "wife": "@I36459482082@",
       "children": [
-        "@I36459481881@"
+        "@I36459481881@",
+        "@USER_APRIL_DAWN_ROBEL@"
       ],
       "marriage": {
         "type": "MARR",
@@ -65305,7 +65423,7 @@
     }
   ],
   "narratives": {
-    "Williams": "The Williams line is the core brick-wall project. The reliable public story begins with George W. Williams, born 24 Nov 1843 and associated with Mississippi/Louisiana, Catahoula Parish, Natchitoches, Tensas Parish leads, and later Texas. Dan Williams’s GW Williams register remains the leading family compilation and is treated as most likely unless contradicted. Parentage above George is intentionally not shown as a confirmed ancestor path; Sarah Williams/Lee, Samuel Williams, Col. G.W. Williams of Tensas, and the older imported Williams chain are handled as research leads.",
+    "Williams": "The confirmed Williams line is anchored in Jason Elon Williams and descends through Robert Elon Williams II, Robert Elon Williams, Elisha Alson Williams, and George Washington Williams. The older Williams paternal line remains a brick-wall research problem until Y-DNA and primary records support a parentage claim.",
     "Lee": "The Lee line currently runs through Nancy Adeline “Addie” Lee, daughter of Jacob Walker Lee and Nancy Blakely. A key open question is whether Sarah Williams/Lee in George W. Williams’s childhood household connects to Zachariah Lee and whether that Lee line was related to Jacob Walker Lee.",
     "Blakely": "The Blakely/Blakley line runs through Nancy Blakely, wife of Jacob Walker Lee. The current tree includes John William Blakely and Elizabeth Smith, but the older Blakely parentage requires proof because multiple compiled trees conflict.",
     "Bangs": "The Bangs line is one of the deepest imported lines in the GEDCOM, reaching early New England/English candidates. Treat the deep medieval/early colonial stretch as candidate until source reviewed.",
@@ -65318,12 +65436,12 @@
   "dnaClusters": [
     {
       "id": "DNA_CLUSTER_A",
-      "title": "Cluster A — Chr 3 Shirley/Devon/Jason triangulated segment",
-      "status": "Confirmed triangulated segment; ancestor unknown",
+      "title": "Cluster A — Chr 3 Jason/Laurie/Shirley triangulated segment",
+      "status": "Confirmed triangulated segment; Devon is close relative evidence, not independent proof by itself",
       "chromosome": "3",
       "start": 4340847,
       "end": 19436587,
-      "summary": "Jason WP2969985, Shirley Jane Greene Lee T780066, and Devon Rothchild M850975 all match each other on overlapping chromosome 3 segment. Candidate family group: Lee, Blakely/Blakley, Smith/Hanna, Bunn/Burns, Williams, or another Southern cluster."
+      "summary": "Jason WP2969985, Laurie Poole Brunell T906798, and Shirley Jane Greene Lee T780066 triangulate on chromosome 3. Devon Rothchild M850975 is a parent/child-level match to Laurie and should be treated as close-family support rather than an independent fourth triangulation member unless direct Jason/Devon and Shirley/Devon segment comparisons support the same interval."
     },
     {
       "id": "DNA_CLUSTER_B",
@@ -65341,56 +65459,254 @@
       "title": "George W. Williams parentage and Sarah Williams/Lee identity",
       "status": "Open",
       "priority": "High",
-      "summary": "Resolve George W. Williams parentage. Parentage above George is no longer attached as a confirmed path; evaluate Sarah Williams/Lee as likely mother, Samuel Williams of the 1850 Catahoula household, Col. G.W. Williams of Tensas, and older Williams candidates as research leads. Do not attach Benjamin Williams unless evidence appears."
+      "summary": "Resolve George W. Williams parentage. Parentage above George is no longer attached as a confirmed path; evaluate Sarah Williams/Lee as likely mother, Samuel Williams of the 1850 Catahoula household, Col. G.W. Williams of Tensas, and older Williams candidates as research leads. Do not attach Benjamin Williams unless evidence appears.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "Search county/parish probate, land, marriage, and court records."
+        },
+        {
+          "label": "BLM GLO Land Records",
+          "url": "https://glorecords.blm.gov/",
+          "why": "Federal land patents and survey records for migration trail."
+        },
+        {
+          "label": "NARA Catalog",
+          "url": "https://catalog.archives.gov/",
+          "why": "Federal records, military, Dawes, and agency records."
+        },
+        {
+          "label": "Catahoula Parish FamilySearch Wiki",
+          "url": "https://www.familysearch.org/en/wiki/Catahoula_Parish,_Louisiana_Genealogy",
+          "why": "Parish marriage, probate, conveyance, and courthouse pointers."
+        },
+        {
+          "label": "Natchitoches Parish FamilySearch Wiki",
+          "url": "https://www.familysearch.org/en/wiki/Natchitoches_Parish,_Louisiana_Genealogy",
+          "why": "Succession, conveyance, and court record pointers."
+        },
+        {
+          "label": "Louisiana Digital Library",
+          "url": "https://louisianadigitallibrary.org/",
+          "why": "Louisiana historical and archival material."
+        }
+      ]
     },
     {
       "id": "RT_DETACHED_WILLIAMS_CHAIN",
       "title": "Detached older Williams ancestry path",
       "status": "Research lead only",
       "priority": "High",
-      "summary": "Test the imported chain Unknown Williams → Samuel Williams → Lewis Williams → Samuel Williams → John Thomas Williams. Keep detached until Y-DNA, probate, land, census, or other records tie it to George W. Williams."
+      "summary": "Test the imported chain Unknown Williams → Samuel Williams → Lewis Williams → Samuel Williams → John Thomas Williams. Keep detached until Y-DNA, probate, land, census, or other records tie it to George W. Williams.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "Search county/parish probate, land, marriage, and court records."
+        },
+        {
+          "label": "BLM GLO Land Records",
+          "url": "https://glorecords.blm.gov/",
+          "why": "Federal land patents and survey records for migration trail."
+        },
+        {
+          "label": "NARA Catalog",
+          "url": "https://catalog.archives.gov/",
+          "why": "Federal records, military, Dawes, and agency records."
+        },
+        {
+          "label": "Mississippi Department of Archives and History",
+          "url": "https://www.mdah.ms.gov/",
+          "why": "Mississippi county, land, military, and archival searches."
+        },
+        {
+          "label": "South Carolina Archives Index",
+          "url": "https://www.archivesindex.sc.gov/",
+          "why": "Edgefield/Lexington/Carolinas probate, equity, and land leads."
+        }
+      ]
     },
     {
       "id": "RT_YDNA",
       "title": "Y-DNA37 Williams line placement",
       "status": "Pending test results",
       "priority": "High",
-      "summary": "When FamilyTreeDNA Y-DNA37 results post, compare surname, genetic distance, haplogroup, earliest known ancestor, and Williams DNA Project grouping. Set earliest known paternal ancestor as George W. Williams, not speculative older Williams."
+      "summary": "When FamilyTreeDNA Y-DNA37 results post, compare surname, genetic distance, haplogroup, earliest known ancestor, and Williams DNA Project grouping. Set earliest known paternal ancestor as George W. Williams, not speculative older Williams.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "FamilyTreeDNA",
+          "url": "https://www.familytreedna.com/",
+          "why": "Y-DNA match list, haplogroup, project placement, and genetic distance."
+        },
+        {
+          "label": "FamilyTreeDNA Projects",
+          "url": "https://www.familytreedna.com/groups",
+          "why": "Find Williams surname and regional DNA project groups."
+        },
+        {
+          "label": "GEDmatch",
+          "url": "https://www.gedmatch.com/",
+          "why": "Autosomal segment review and triangulation."
+        }
+      ]
     },
     {
       "id": "RT_MCR1743",
       "title": "MCR 1743 / Addie Lee testimony",
       "status": "Open",
       "priority": "High",
-      "summary": "Find the full Department of Interior / Dawes / Mississippi Choctaw rejected/refused testimony referenced for Nancy Adeline Lee Tyson Williams. Record the claimed lineage and reason for refusal."
+      "summary": "Find the full Department of Interior / Dawes / Mississippi Choctaw rejected/refused testimony referenced for Nancy Adeline Lee Tyson Williams. Record the claimed lineage and reason for refusal.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "NARA Catalog",
+          "url": "https://catalog.archives.gov/",
+          "why": "Department of Interior, Dawes, and rejected/refused claim material."
+        },
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "Dawes/Mississippi Choctaw and related microfilm catalog searches."
+        },
+        {
+          "label": "Oklahoma Historical Society Research Center",
+          "url": "https://www.okhistory.org/research/",
+          "why": "Dawes and Five Civilized Tribes research leads."
+        }
+      ]
     },
     {
       "id": "RT_LEE_RELATION",
       "title": "Jacob Walker Lee and Zachariah Lee relationship",
       "status": "Open",
       "priority": "High",
-      "summary": "Seek probate, land, court, Bible, or estate evidence proving whether Jacob Walker Lee and Zachariah Lee were brothers/close kin under Samuel Jefferson Lee or related Lee families."
+      "summary": "Seek probate, land, court, Bible, or estate evidence proving whether Jacob Walker Lee and Zachariah Lee were brothers/close kin under Samuel Jefferson Lee or related Lee families.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "Search county/parish probate, land, marriage, and court records."
+        },
+        {
+          "label": "BLM GLO Land Records",
+          "url": "https://glorecords.blm.gov/",
+          "why": "Federal land patents and survey records for migration trail."
+        },
+        {
+          "label": "NARA Catalog",
+          "url": "https://catalog.archives.gov/",
+          "why": "Federal records, military, Dawes, and agency records."
+        },
+        {
+          "label": "Newton County Mississippi FamilySearch Wiki",
+          "url": "https://www.familysearch.org/en/wiki/Newton_County,_Mississippi_Genealogy",
+          "why": "Newton/Hickory records for Jacob Walker Lee and related families."
+        },
+        {
+          "label": "Wayne County Mississippi FamilySearch Wiki",
+          "url": "https://www.familysearch.org/en/wiki/Wayne_County,_Mississippi_Genealogy",
+          "why": "Early Mississippi parent/neighbor county records."
+        }
+      ]
     },
     {
       "id": "RT_BLAKELY_PROOF",
       "title": "John William Blakely parentage",
       "status": "Open",
       "priority": "Medium",
-      "summary": "Test Dionysius Blakely + Fanny Unknown vs alternative John Blakely Sr. parentage using probate, deeds, DNA project evidence, and estate files."
+      "summary": "Test Dionysius Blakely + Fanny Unknown vs alternative John Blakely Sr. parentage using probate, deeds, DNA project evidence, and estate files.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "South Carolina Archives Index",
+          "url": "https://www.archivesindex.sc.gov/",
+          "why": "Dionysius/John Blakely estate, land, and court records."
+        },
+        {
+          "label": "FamilyTreeDNA Dionysius Blakeley Project",
+          "url": "https://www.familytreedna.com/groups/dionysius-blakeley/about/background",
+          "why": "Blakely/Blakeley DNA and compiled descendant research."
+        },
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "Wayne/Newton MS and Edgefield/Lexington SC records."
+        }
+      ]
     },
     {
       "id": "RT_LITTLEJOHN_SMITH",
       "title": "Little John Smith / Elizabeth Hanna / Newsom conflict",
       "status": "Open",
       "priority": "Medium",
-      "summary": "Separate Elizabeth Hanna/Hannah, Elizabeth Newsom, and possible profile conflations. Confirm mother of Elizabeth Smith “Kow-e-moon-tah.”"
+      "summary": "Separate Elizabeth Hanna/Hannah, Elizabeth Newsom, and possible profile conflations. Confirm mother of Elizabeth Smith “Kow-e-moon-tah.”",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "South Carolina Archives Index",
+          "url": "https://www.archivesindex.sc.gov/",
+          "why": "Smith/Hanna/Newsom probate and court records."
+        },
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "South Carolina and Mississippi probate/census/land records."
+        }
+      ]
     },
     {
       "id": "RT_NANCY_WILLIAMS_LITTLE",
       "title": "Nancy Williams Little / Basden lead",
       "status": "Watch list",
       "priority": "Low",
-      "summary": "Research Nancy Williams b. c.1765 NC, married John Little, child Mary Elizabeth Little Basden. Do not confuse John Little with Little John Smith."
+      "summary": "Research Nancy Williams b. c.1765 NC, married John Little, child Mary Elizabeth Little Basden. Do not confuse John Little with Little John Smith.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "North Carolina and Alabama/Mississippi county records."
+        },
+        {
+          "label": "BLM GLO Land Records",
+          "url": "https://glorecords.blm.gov/",
+          "why": "Trace Little/Basden/Williams land entries and neighbors."
+        }
+      ]
+    },
+    {
+      "id": "RT_RELATIVE_SUBMISSIONS",
+      "title": "Williams relative submissions and family-branch intake",
+      "status": "Open",
+      "priority": "High",
+      "summary": "Use the Add My Family form to collect descendant paths, living-person privacy permissions, DNA kit details, and source records from Williams-connected relatives. Review every submission before merging into the public tree.",
+      "sourceLinks": [
+        {
+          "label": "WikiTree Williams profiles",
+          "url": "https://www.wikitree.com/genealogy/WILLIAMS",
+          "why": "Compare public Williams profiles and avoid duplicates."
+        },
+        {
+          "label": "GEDmatch",
+          "url": "https://www.gedmatch.com/",
+          "why": "Collect kit numbers and segment evidence from contributors."
+        }
+      ],
+      "workingNote": "",
+      "log": []
     }
   ],
   "confidenceLevels": [
