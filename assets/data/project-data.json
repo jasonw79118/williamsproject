@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Williams Project",
-    "version": "0.2.2",
-    "generatedAt": "2026-07-08T22:05:00Z",
+    "version": "0.2.3",
+    "generatedAt": "2026-07-08T22:15:00Z",
     "rootPersonId": "@I36459481881@",
     "privacyMode": "UI masks living-person vital details unless public permission is marked. Because this is a static GitHub Pages site, anything committed inside project-data.json can still be viewed directly; review living-person facts before publishing.",
     "importSummary": {
       "people": 817,
       "families": 214,
-      "sources": 97,
+      "sources": 100,
       "directAncestorsIncludingRoot": 215,
       "maxGeneration": 4
     },
@@ -422,7 +422,8 @@
         "@F21@"
       ],
       "notes": [
-        "User-supplied correction: Tammy Gail (Taylor) Williams, born 12 Jul 1960 in Lamar County, Texas. Living-person details should be reviewed before public display."
+        "User-supplied correction: Tammy Gail (Taylor) Williams, born 12 Jul 1960 in Lamar County, Texas. Living-person details should be reviewed before public display.",
+        "User-supplied correction: Father is William Odis Taylor; mother/family group should be reviewed through the Taylor family records before publishing public details."
       ],
       "sources": [],
       "facts": [],
@@ -433,7 +434,7 @@
       "isDirectAncestor": true,
       "living": true,
       "confidence": "Confirmed / close family or core source",
-      "researchStatus": "Mother of Jason Williams; close-family living entry.",
+      "researchStatus": "Mother of Jason Williams; daughter of William Odis Taylor. Close-family living entry.",
       "lineTags": [
         "Taylor"
       ],
@@ -486,10 +487,13 @@
         "@F78@",
         "@F79@"
       ],
-      "notes": [],
+      "notes": [
+        "User-supplied correction: William Odis Taylor is Tammy Gail Taylor Williams’s father and Jason Williams’s maternal grandfather. Family knowledge also reports he served in the Korean War; verify service details with official military records."
+      ],
       "sources": [
         "@S1765052672@",
-        "@S1765044681@"
+        "@S1765044681@",
+        "USER_FAMILY_WILLIAM_ODIS_TAYLOR_KOREAN_WAR"
       ],
       "facts": [
         {
@@ -552,6 +556,18 @@
             "@S1765044681@"
           ],
           "notes": []
+        },
+        {
+          "type": "MILI",
+          "date": "Korean War era",
+          "place": "United States military service",
+          "value": "Served in the Korean War",
+          "sources": [
+            "USER_FAMILY_WILLIAM_ODIS_TAYLOR_KOREAN_WAR"
+          ],
+          "notes": [
+            "Reported by Jason Williams as family knowledge; official service record still needed."
+          ]
         }
       ],
       "media": [],
@@ -561,7 +577,7 @@
       "isDirectAncestor": true,
       "living": false,
       "confidence": "Confirmed / close family or core source",
-      "researchStatus": "Core family line",
+      "researchStatus": "Core family line; maternal grandfather of Jason Williams. Korean War service reported by family knowledge; official service record needed.",
       "lineTags": [
         "Taylor"
       ]
@@ -64971,6 +64987,16 @@
       "notes": [
         "Imported as the initial data base for Williamsproject. Distant lines should be source-reviewed before being treated as proven."
       ]
+    },
+    {
+      "id": "USER_FAMILY_WILLIAM_ODIS_TAYLOR_KOREAN_WAR",
+      "title": "User-supplied family knowledge: William Odis Taylor Korean War service",
+      "author": "Jason Williams",
+      "publication": "Provided in ChatGPT conversation, 8 Jul 2026",
+      "repository": "",
+      "notes": [
+        "User reported that William Odis Taylor is Tammy Gail Taylor Williams’s father, Jason Williams’s maternal grandfather, and served in the Korean War. Military-service details should be verified with official records before marking as fully sourced."
+      ]
     }
   ],
   "lineSummaries": [
@@ -65438,7 +65464,7 @@
     "Blakely": "The Blakely/Blakley line runs through Nancy Blakely, wife of Jacob Walker Lee. The current tree includes John William Blakely and Elizabeth Smith, but the older Blakely parentage requires proof because multiple compiled trees conflict.",
     "Bangs": "The Bangs line reaches Oran/Orrin Bangs, born about 1805. The project working file currently lists Ohio as his birthplace, while public compiled profiles often place him in Maine and connect him to John Bangs, with Elizabeth Wheeler as probable mother. Treat the Oran/Orrin birthplace and parentage as medium-confidence research leads needing source review. If confirmed through John Bangs, the line likely connects to the early New England Bangs family descended from Edward Bangs, an English immigrant to Plymouth Colony on the Anne in 1623. No proven nobility, coat-of-arms entitlement, or direct monarchy service is currently established.",
     "Miller-Mueller": "The Miller/Mueller line includes American Miller ancestors and Germanic Mueller/Dotterer/Goebel-style candidate lines. Several generations go deep into Europe and should be reviewed source-by-source.",
-    "Taylor": "The Taylor line is traced through William Odis Taylor and earlier Taylor/Murphy/Morrow-linked families in the imported tree. Review county-level records before promoting distant generations.",
+    "Taylor": "The Taylor line is traced through Tammy Gail (Taylor) Williams and her father William Odis Taylor, Jason Williams’s maternal grandfather. William Odis Taylor was born in Lamar County, Texas, died in Powderly, Lamar County, Texas, and family knowledge reports that he served in the Korean War. The next source-review target is to verify William Odis Taylor’s military service through official records while continuing the Taylor line through William Monroe Taylor, Pard/James Parrington Taylor, and older candidate Taylor/Murphy/Morrow-linked families.",
     "Duck": "The Duck line currently traces from Velma Duck through John Franklin Duck and older Tennessee/North Carolina Duck candidates.",
     "Drake": "The Drake line appears through the Dodd/Drake side in the imported tree and currently includes DNA-note-marked candidates. Treat older Drake lines as candidates until evidence is reviewed.",
     "Williams Research Leads": "This line holds detached Williams candidates that may belong above George W. Williams. These people came from imported Ancestry/GEDCOM material or family/context leads. They are preserved for research but are not treated as confirmed ancestors until records or Y-DNA support them."
@@ -65750,6 +65776,47 @@
         {
           "label": "Ohio Genealogical Society",
           "url": "https://www.ogs.org/"
+        }
+      ]
+    },
+    {
+      "id": "RT_TAYLOR_WILLIAM_ODIS_KOREAN_WAR",
+      "title": "Verify William Odis Taylor Korean War service",
+      "status": "Open",
+      "priority": "Medium",
+      "summary": "William Odis Taylor is confirmed in the close-family line as Tammy Gail Taylor Williams’s father and Jason Williams’s maternal grandfather. User-supplied family knowledge reports Korean War service. Locate official military evidence such as DD-214, discharge record, VA burial marker application, county veteran registration, newspaper notice, obituary, or NARA/NPRC record.",
+      "workingNote": "",
+      "log": [],
+      "sourceLinks": [
+        {
+          "label": "NARA Official Military Personnel Files",
+          "url": "https://www.archives.gov/personnel-records-center/military-personnel",
+          "why": "Request or locate official military personnel records / DD-214 information."
+        },
+        {
+          "label": "National Archives Catalog",
+          "url": "https://catalog.archives.gov/",
+          "why": "Search indexed military, veterans, and federal records."
+        },
+        {
+          "label": "FamilySearch Catalog",
+          "url": "https://www.familysearch.org/search/catalog",
+          "why": "Search Lamar County, Texas veteran, court, obituary, cemetery, and local history records."
+        },
+        {
+          "label": "Fold3",
+          "url": "https://www.fold3.com/",
+          "why": "Search military record collections and Korean War-era service material."
+        },
+        {
+          "label": "Newspapers.com",
+          "url": "https://www.newspapers.com/",
+          "why": "Search Lamar County / Paris, Texas newspapers for service announcements and obituary mentions."
+        },
+        {
+          "label": "Find a Grave",
+          "url": "https://www.findagrave.com/",
+          "why": "Check memorials for military service inscriptions, grave photos, or veteran markers."
         }
       ]
     }

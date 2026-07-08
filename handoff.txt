@@ -1,4 +1,4 @@
-williamsproject handoff — v0.2.2
+williamsproject handoff — v0.2.3
 Generated: 2026-07-08
 
 Purpose:
@@ -14,7 +14,7 @@ Data imported:
 - 214 families
 - Public-safe UI masking retained for living people
 
-Changes in v0.2.2:
+Changes in v0.2.3:
 - Moved quick navigation to a fixed left-side quick-nav rail on desktop.
 - Added mobile bottom navigation behavior for small screens.
 - Restored and front-page surfaced the known George Washington “G.W.” Williams family group: wife Nancy Adeline “Addie” Lee and children William Walter, Ida, Lucy, Rhoda, George Washington Jr., and Elisha Alson Williams.
@@ -69,7 +69,19 @@ git commit -m "restore GW family group and move navigation left"
 git push origin main
 
 
-## v0.2.2 Bangs/Taylor research update
+## v0.2.3 Bangs/Taylor research update
 - Added Bangs research note: Oran/Orrin Bangs 1805 birthplace conflict, possible John Bangs + Elizabeth Wheeler connection, and Edward Bangs/Plymouth line treated as a source-review lead rather than proven nobility.
 - Added Bangs research target for verifying Oran/Orrin to John Bangs and Edward Bangs.
 - Taylor side review started from Tammy Gail Taylor Williams through William Odis Taylor, William Monroe Taylor, Pard/James Parrington Taylor, and older candidate Taylor lines.
+
+
+Changes in v0.2.3:
+- Confirmed William Odis Taylor as Tammy Gail Taylor Williams’s father and Jason Williams’s maternal grandfather.
+- Added user-supplied family note that William Odis Taylor served in the Korean War.
+- Added research target RT_TAYLOR_WILLIAM_ODIS_KOREAN_WAR with source links for NARA/NPRC, FamilySearch, Fold3, Newspapers.com, and Find a Grave.
+- Taylor narrative now highlights the close-family line Tammy Gail Taylor Williams → William Odis Taylor and flags Korean War service as needing official record verification.
+
+Suggested commit:
+git add .
+git commit -m "update Taylor line and add Korean War service target"
+git push origin main
